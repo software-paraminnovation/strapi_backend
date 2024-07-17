@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "magzines3buckects",
+  "info": {
+    "singularName": "magzines3buckect",
+    "pluralName": "magzines3buckects",
+    "displayName": "magzines3buckect"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    }
+  }
+}
