@@ -590,37 +590,6 @@ export interface PluginContentReleasesReleaseAction
   };
 }
 
-export interface PluginStrapiGoogleAuthWithTokenGoogleCredential
-  extends Schema.SingleType {
-  collectionName: 'google_credentials';
-  info: {
-    singularName: 'google-credential';
-    pluralName: 'google-credentials';
-    displayName: 'Google Credential';
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    client_id: Attribute.String & Attribute.Required & Attribute.Unique;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'plugin::strapi-google-auth-with-token.google-credential',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'plugin::strapi-google-auth-with-token.google-credential',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginI18NLocale extends Schema.CollectionType {
   collectionName: 'i18n_locale';
   info: {
@@ -863,6 +832,37 @@ export interface PluginStrapiGoogleAuthGoogleCredential
   };
 }
 
+export interface PluginStrapiGoogleAuthWithTokenGoogleCredential
+  extends Schema.SingleType {
+  collectionName: 'google_credentials';
+  info: {
+    singularName: 'google-credential';
+    pluralName: 'google-credentials';
+    displayName: 'Google Credential';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    client_id: Attribute.String & Attribute.Required & Attribute.Unique;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'plugin::strapi-google-auth-with-token.google-credential',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'plugin::strapi-google-auth-with-token.google-credential',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBlogBlog extends Schema.CollectionType {
   collectionName: 'blogs';
   info: {
@@ -967,12 +967,12 @@ declare module '@strapi/types' {
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
-      'plugin::strapi-google-auth-with-token.google-credential': PluginStrapiGoogleAuthWithTokenGoogleCredential;
       'plugin::i18n.locale': PluginI18NLocale;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::strapi-google-auth.google-credential': PluginStrapiGoogleAuthGoogleCredential;
+      'plugin::strapi-google-auth-with-token.google-credential': PluginStrapiGoogleAuthWithTokenGoogleCredential;
       'api::blog.blog': ApiBlogBlog;
       'api::magazine.magazine': ApiMagazineMagazine;
       'api::magzines3buckect.magzines3buckect': ApiMagzines3BuckectMagzines3Buckect;
