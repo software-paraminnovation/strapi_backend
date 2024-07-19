@@ -17,6 +17,7 @@
     "@strapi/provider-upload-aws-s3": "^4.25.3",
     "@strapi/strapi": "4.25.2",
     "better-sqlite3": "8.6.0",
+    "openai": "^4.52.7",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
