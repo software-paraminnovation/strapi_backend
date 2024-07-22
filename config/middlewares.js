@@ -31,7 +31,7 @@ module.exports = [
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ['http://localhost:5173', 'https://magazinestorage1.s3.ap-south-1.amazonaws.com','http://demoblog1.s3-website.ap-south-1.amazonaws.com'], // Specify allowed origins
+      origin: ['http://localhost:5173', 'https://magazinestorage1.s3.ap-south-1.amazonaws.com','http://demoblog1.s3-website.ap-south-1.amazonaws.com','http://localhost:3000',"https://website.paramscience.org"], // Specify allowed origins
       headers: '*',  // Specify which headers can be used in the requests
       credentials: true, // Credentials are cookies, authorization headers, or TLS client certificates
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'], // Specify allowed methods
