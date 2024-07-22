@@ -6,9 +6,11 @@ module.exports = ({ env }) => ({
         config: {
             provider: 'aws-s3',
             providerOptions: {
-                s3Options: {  // Wrap S3 config in s3Options
-                    accessKeyId: env('AWS_ACCESS_KEY_ID'),
-                    secretAccessKey: env('AWS_ACCESS_SECRET'),
+                s3Options: {
+                    credentials: {  // Wrap credentials within a credentials object
+                        accessKeyId: env('AWS_ACCESS_KEY_ID'),
+                        secretAccessKey: env('AWS_ACCESS_SECRET'),
+                    },
                     region: env('AWS_REGION'),
                     params: {
                         ACL: env('AWS_ACL', 'public-read'),
